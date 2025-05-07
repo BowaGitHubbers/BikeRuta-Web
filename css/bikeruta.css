@@ -1,0 +1,8 @@
+.bikeruta-feature h5 {
+    color: #00E89E; /* Default green, override here */
+  }
+  
+  .bikeruta-feature p {
+    color: #cccccc; /* Light gray text for readability on dark bg */
+  }
+  

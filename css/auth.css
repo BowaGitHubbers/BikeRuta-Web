@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Chillax:wght@300;400;500;600;700&display=swap');
+
+body, button, input, a, h1, h2, h3, h4, h5, h6, p, span, div {
+    font-family: 'Chillax', sans-serif;
+  }
+
+.page-content{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(35, 45, 57), rgb(35, 45, 57));
+    
+}
+.auth-card{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+    padding: 10px 10%;
+    
+}
+.service-btn{
+    background-color: white;
+    border: 1px solid rgb(220, 220,220);
+    width: 100%;
+    color: rgb(46, 46, 46);
+    box-shadow: none;
+}
+.btn-theme{
+    background-color: black !important;
+    color: white;
+    box-shadow: none !important;
+    position: absolute;
+    top:10px;
+    left: 10px;
+}

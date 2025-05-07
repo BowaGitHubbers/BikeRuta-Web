@@ -1,0 +1,35 @@
+:root {
+    /* Define color variables */
+    --default-text-color: rgb(98, 228, 164);
+    --default-link-color: rgb(255, 255, 255);
+    --default-hover-color: rgb(255, 255, 255);
+    --custom-section-color: rgb(255, 255, 255);
+    --danger-color: rgb(255, 0, 0);
+}
+
+/* General Text Colors */
+.text-feature, .text-routes, .text-whats-new, .text-privacy {
+    color: var(--default-text-color);
+}
+
+.text-feature-link, .text-routes-link, .text-whats-new-link, .text-privacy-link {
+    color: var(--default-link-color);
+}
+
+.text-feature-link:hover, .text-routes-link:hover, .text-whats-new-link:hover, .text-privacy-link:hover {
+    color: var(--default-hover-color);
+}
+
+/* Customize each section */
+.text-feature, .text-routes, .text-whats-new, .text-privacy {
+    color: var(--custom-section-color);
+}
+
+.text-feature-link, .text-routes-link, .text-whats-new-link, .text-privacy-link {
+    color: var(--custom-section-color);
+}
+
+/* Optionally set a default color for empty links */
+.text-danger {
+    color: var(--danger-color);
+}

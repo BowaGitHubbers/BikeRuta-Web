@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" id="mainStyle" href="css/auth.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+    <title>Ultra Shopping Center - Sign Up</title>
+  </head>
+  <body class="auth-body" style="background-color: rgb(24, 24, 24);">
+    <div class="page-content d-flex align-items-center">
+      <div class="container d-flex justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+          <div class="auth-card">
+            <div class="p-3 mt-3 d-flex justify-content-center">
+              <div class="logo-icon">
+                <img src="images/logoruta.png" alt="site icon" width="200px"/>
+              </div>
+            </div>
+            <button class="btn mt-5 mb-3 service-btn">
+              <i class="fab fa-facebook me-2"></i>Sign up with Facebook
+            </button>
+            <button class="btn mb-3 service-btn">
+              <i class="fab fa-google me-2"></i>Sign up with Google
+            </button>
+            <hr />
+            <form id="signup-form">
+              <div class="mb-2 mt-5">
+                <input
+                  type="email"
+                  class="form-control auth-input"
+                  placeholder="Email Address"
+                  required
+                  id="signup-email"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control auth-input"
+                  placeholder="Password"
+                  required
+                  id="signup-password"
+                />
+              </div>
+              <button
+                class="btn auth-btn mt-2 mb-4 w-100 text-white"
+                type="submit"
+                style="background-color: #232D39;"
+              >
+                Register
+              </button>
+            </form>
+            <p class="text-center backmb-4" style="color: rgb(0, 0, 0);">
+              Already have an account?
+              <a href="login.html" class="text-muted">Back to Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      // Firebase config
+      const firebaseConfig = {
+        apiKey: "AIzaSyBE2NX5yK6BPjfS0bOO94Hzfawn8wvSFkA",
+        authDomain: "bowa-project.firebaseapp.com",
+        databaseURL: "https://bowa-project-default-rtdb.firebaseio.com",
+        projectId: "bowa-project",
+        storageBucket: "bowa-project.firebasestorage.app",
+        messagingSenderId: "830130901864",
+        appId: "1:830130901864:web:e48f8c3e03624acbacfcdd",
+        measurementId: "G-KYZ7FHMRGL"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      // Email/Password Sign Up
+      document.getElementById("signup-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("signup-password").value;
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Account created successfully!");
+            window.location.href = "login.html";
+          })
+          .catch((error) => {
+            alert("Registration failed: " + error.message);
+          });
+      });
+
+      // Facebook Sign Up
+      document.querySelector(".service-btn:nth-of-type(1)").addEventListener("click", function () {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+          .then((result) => {
+            alert("Facebook signup successful!");
+            window.location.href = "dashboard.html";
+          })
+          .catch((error) => {
+            alert("Facebook signup failed: " + error.message);
+          });
+      });
+
+      // Google Sign Up
+      document.querySelector(".service-btn:nth-of-type(2)").addEventListener("click", function () {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+          .then((result) => {
+            alert("Google signup successful!");
+            window.location.href = "dashboard.html";
+          })
+          .catch((error) => {
+            alert("Google signup failed: " + error.message);
+          });
+      });
+
+      // Theme Toggle
+      function onThemeChange() {
+        let cssStyleSheet = document.getElementById("mainStyle");
+        let cssLength = cssStyleSheet.href.length;
+        let path = cssStyleSheet.href.substring(cssLength - 9, cssLength);
+        let textElement = document.querySelector(".backmb-4");
+
+        if (path === "/auth.css") {
+          cssStyleSheet.href = "css/auth_dark.css";
+          document.getElementById("theme_icon").className = "fa fa-sun";
+          textElement.style.color = "white";
+        } else {
+          cssStyleSheet.href = "css/auth.css";
+          document.getElementById("theme_icon").className = "fa fa-moon";
+          textElement.style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>

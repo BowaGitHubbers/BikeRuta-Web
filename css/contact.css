@@ -1,0 +1,9 @@
+/* Contact Icon Styling */
+.contact-info i {
+    color: #232D39; /* Replace with any RGB or HEX if needed */
+    font-size: 1.2rem;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+  }
+  
