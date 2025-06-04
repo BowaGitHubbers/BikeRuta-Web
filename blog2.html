@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/text-colors.css">
+</head>
+<body>
+<!-- Include Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts: Chillax -->
+  <link href="https://fonts.googleapis.com/css2?family=Chillax:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+  <!-- Include Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+<!-- Include Bootstrap CSS and Icons in your <head> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #232D39;">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logogreenland.png" alt="Brand Logo" width="150" class="img-fluid">
+      </a>
+
+    <!-- Toggle for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index2.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Right section -->
+      <div class="d-flex align-items-center">
+        <!-- Search toggle -->
+        <button id="searchToggle" class="btn btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px;">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Expanding search form -->
+        <form id="searchForm" class="d-none d-lg-flex me-2" style="width: 0; overflow: hidden; transition: width 0.3s ease;">
+          <input class="form-control" type="search" placeholder="Search..." aria-label="Search" style="width: 300px;">
+        </form>
+
+        <!-- Login dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search toggle script -->
+<script>
+  const toggleBtn = document.getElementById('searchToggle');
+  const searchForm = document.getElementById('searchForm');
+
+  toggleBtn.addEventListener('click', function () {
+    if (searchForm.style.width === '0px' || searchForm.style.width === '') {
+      searchForm.style.width = '300px';
+    } else {
+      searchForm.style.width = '0';
+    }
+  });
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Navbar Closing -->
+
+  
+
+<!-- Blog Page Section -->
+<section class="container py-5">
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-md-10 col-lg-8">
+        <h1 class="fw-bold text-success mb-3" style="font-size: 2.5rem;">BikeRuta Blogs</h1>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+ <!-- Blog Post 1 -->
+ <div class="col-12 mb-4">
+  <img src="images/gpsstuff1.png" class="w-100 rounded mb-3" alt="Exploring Metro Manila’s Hidden Bike Routes" style="height: 250px; object-fit: cover;" />
+  <h4 class="text-success">Exploring Metro Manila’s Hidden Bike Routes with BikeRuta</h4>
+  <div class="d-flex justify-content-between text-muted mb-2 small">
+    <span>Authors: Juan Dela Cruz · Ana Reyes · Marco Tan</span>
+    <span>15 April 2025 | 5 min read</span>
+  </div>
+  <p>Discover scenic and safe paths in the city shared by real BikeRuta users—from quiet backroads to park trails. Learn how our app’s community feature uncovers hidden gems for urban riders.</p>
+  <a href="#" class="btn btn-success">Read More</a>
+</div>
+
+<!-- Blog Post 2 -->
+<div class="col-12 mb-4">
+  <img src="images/phoneholding.jpg" class="w-100 rounded mb-3" alt="How BikeRuta Helps First-Time Cyclists Navigate the City" style="height: 250px; object-fit: cover; object-position: center 30%;" />
+  <h4 class="text-success">How BikeRuta Helps First-Time Cyclists Navigate the City</h4>
+  <div class="d-flex justify-content-between text-muted mb-2 small">
+    <span>Authors: Sarah Lim · Carlo Santos</span>
+    <span>10 April 2025 | 4 min read</span>
+  </div>
+  <p>For new bikers, navigating traffic-heavy streets can be intimidating. Learn how BikeRuta’s safety-first features and route recommendations build confidence for beginners.</p>
+  <a href="#" class="btn btn-success">Read More</a>
+</div>
+
+<!-- Blog Post 3 -->
+<div class="col-12 mb-4">
+  <img src="images/alert3.png" class="w-100 rounded mb-3" alt="Why Security Alerts Matter: A Rider’s Real Experience" style="height: 250px; object-fit: cover;" />
+  <h4 class="text-success">Why Security Alerts Matter: A Rider’s Real Experience</h4>
+  <div class="d-flex justify-content-between text-muted mb-2 small">
+    <span>Authors: Tricia Gomez · Kevin Uy</span>
+    <span>5 April 2025 | 3 min read</span>
+  </div>
+  <p>After avoiding a high-risk area thanks to BikeRuta’s real-time alert system, this rider shares how the app became a daily must-have.</p>
+  <a href="#" class="btn btn-success">Read More</a>
+</div>
+
+<!-- Blog Post 4 -->
+<div class="col-12 mb-4">
+  <img src="images/award.png" class="w-100 rounded mb-3" alt="Award-Winning Innovation: BikeRuta at the 2025 Student Tech Expo" style="height: 250px; object-fit: cover;" />
+  <h4 class="text-success">Award-Winning Innovation: BikeRuta at the 2025 Student Tech Expo</h4>
+  <div class="d-flex justify-content-between text-muted mb-2 small">
+    <span>Authors: BikeRuta Dev Team</span>
+    <span>1 April 2025 | 6 min read</span>
+  </div>
+  <p>BikeRuta was recently recognized for its innovative approach to cycling safety at the annual Student Tech Expo. Here’s how we built the app and what’s next.</p>
+  <a href="#" class="btn btn-success">Read More</a>
+</div>
+
+<!-- Blog Post 5 -->
+<div class="col-12 mb-4">
+  <img src="images/weather.jpeg" class="w-100 rounded mb-3" alt="Rain or Shine: Riding Smart with Real-Time Weather Alerts" style="height: 250px; object-fit: cover; object-position: center 90%;" />
+  <h4 class="text-success">Rain or Shine: Riding Smart with Real-Time Weather Alerts</h4>
+  <div class="d-flex justify-content-between text-muted mb-2 small">
+    <span>Authors: Janine Lopez · Rico Delos Reyes</span>
+    <span>28 March 2025 | 4 min read</span>
+  </div>
+  <p>Get to know how our in-app weather alerts help you avoid unexpected downpours or extreme heat while on the road.</p>
+  <a href="#" class="btn btn-success">Read More</a>
+</div>
+
+</div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer style="background-color: #232D39;" class="text-dark py-5">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Logo & App Buttons -->
+        <div class="col-md-3 mb-4">
+          <img src="images/logogreenland.png" alt="BikeRuta Logo" width="120" class="mb-2">
+          <div class="mb-2">
+            <img src="images/appgoog.png" alt="App Store" width="130" class="mb-2">
+            <img src="\" alt="" width="130">
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#"><i class="bi bi-twitter fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-youtube fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-linkedin fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-facebook fs-5 icon-black"></i></a>
+          </div>                  
+        </div>
+  
+<!-- Column 1 -->
+<div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-feature">Features</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-feature-link text-decoration-none">Subscription</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Family Plan</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Student Discount</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Medical Discount</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Send a Gift</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">About</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Careers</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 2 -->
+  <div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-routes">Routes</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-routes-link text-decoration-none">Find Routes</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 3 -->
+  <div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-whats-new">What's New</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Stories</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Support</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Business</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Partner Center</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Terms</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 4 -->
+  <div class="col-md-3 mb-3">
+    <h6 class="fw-bold text-privacy">Privacy</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-privacy-link text-decoration-none">Do Not Share My Info</a></li>
+      <li><a href="#" class="text-danger fw-semibold text-decoration-none"></a></li>
+    </ul>
+  </div>
+  </footer>
+  
+  <!-- Bootstrap Icons CDN (if not already included) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+   <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

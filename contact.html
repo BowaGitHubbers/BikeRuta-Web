@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/text-colors.css">
+</head>
+<body>
+<!-- Include Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts: Chillax -->
+  <link href="https://fonts.googleapis.com/css2?family=Chillax:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+  <!-- Include Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+<!-- Include Bootstrap CSS and Icons in your <head> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #232D39;">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logogreenland.png" alt="Brand Logo" width="150" class="img-fluid">
+      </a>
+
+    <!-- Toggle for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index2.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Right section -->
+      <div class="d-flex align-items-center">
+        <!-- Search toggle -->
+        <button id="searchToggle" class="btn btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px;">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Expanding search form -->
+        <form id="searchForm" class="d-none d-lg-flex me-2" style="width: 0; overflow: hidden; transition: width 0.3s ease;">
+          <input class="form-control" type="search" placeholder="Search..." aria-label="Search" style="width: 300px;">
+        </form>
+
+        <!-- Login dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search toggle script -->
+<script>
+  const toggleBtn = document.getElementById('searchToggle');
+  const searchForm = document.getElementById('searchForm');
+
+  toggleBtn.addEventListener('click', function () {
+    if (searchForm.style.width === '0px' || searchForm.style.width === '') {
+      searchForm.style.width = '300px';
+    } else {
+      searchForm.style.width = '0';
+    }
+  });
+</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Navbar Closing -->
+
+  
+
+<!-- Contact Page Section -->
+<section class="container py-5">
+  <div class="row align-items-center justify-content-center">
+    <!-- Contact Form Section -->
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <h2 class="fw-bold text-center text-success mb-4">Get in Touch</h2>
+      <p class="text-center mb-4">We’d love to hear from you! Whether you’re a cyclist, a partner, or just curious, reach out anytime.</p>
+
+      <form action="your-backend-script.php" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info Section -->
+    <div class="col-lg-5 offset-lg-1">
+      <div class="contact-info-card shadow p-3 rounded p-4">
+        <h2 class="fw-bold text-success mb-4">Contact Information</h2> 
+        <ul class="list-unstyled">
+          <li><strong>Email:</strong> <a href="mailto:bikeruta.ph@gmail.com" class="text-decoration-none text-success">bikeruta.ph@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+639123456789" class="text-decoration-none text-success">+63 912 345 6789</a></li>
+        </ul>
+
+        <h4 class="fw-bold text-success mt-4 text-center">Follow Us</h4>
+        <div class="d-flex justify-content-center">
+          <a href="https://www.facebook.com/BikeRutaPH" class="text-success me-3" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
+          <a href="https://www.instagram.com/bikeruta" class="text-success me-3" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+          <a href="https://twitter.com/BikeRutaApp" class="text-success" target="_blank"><i class="bi bi-twitter fs-3"></i></a>
+        </div>
+
+        <h4 class="fw-bold text-success mt-4 text-center">Location</h4>
+        <p class="text-center">Based in Manila, Philippines</p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799113591!2d-74.2598769!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ba2f1ac9601%3A0x9be5c4a8b24d8f80!2sManila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1632763623850!5m2!1sen!2sus" style="border:0; width: 100%; height: 350px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer style="background-color: #232D39;" class="text-dark py-5">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Logo & App Buttons -->
+        <div class="col-md-3 mb-4">
+          <img src="images/logogreenland.png" alt="BikeRuta Logo" width="120" class="mb-2">
+          <div class="mb-2">
+            <img src="images/appgoog.png" alt="App Store" width="130" class="mb-2">
+            <img src="\" alt="" width="130">
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#"><i class="bi bi-twitter fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-youtube fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-linkedin fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-facebook fs-5 icon-black"></i></a>
+          </div>                  
+        </div>
+  
+<!-- Column 1 -->
+<div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-feature">Features</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-feature-link text-decoration-none">Subscription</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Family Plan</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Student Discount</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Medical Discount</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Send a Gift</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">About</a></li>
+      <li><a href="#" class="text-feature-link text-decoration-none">Careers</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 2 -->
+  <div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-routes">Routes</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-routes-link text-decoration-none">Find Routes</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 3 -->
+  <div class="col-md-2 mb-3">
+    <h6 class="fw-bold text-whats-new">What's New</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Stories</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Support</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Business</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Partner Center</a></li>
+      <li><a href="#" class="text-whats-new-link text-decoration-none">Terms</a></li>
+    </ul>
+  </div>
+  
+  <!-- Column 4 -->
+  <div class="col-md-3 mb-3">
+    <h6 class="fw-bold text-privacy">Privacy</h6>
+    <ul class="list-unstyled">
+      <li><a href="#" class="text-privacy-link text-decoration-none">Do Not Share My Info</a></li>
+      <li><a href="#" class="text-danger fw-semibold text-decoration-none"></a></li>
+    </ul>
+  </div>
+  </footer>
+  
+  <!-- Bootstrap Icons CDN (if not already included) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+   <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+</html>

@@ -1,0 +1,29 @@
+.page-content{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(98, 228, 164), rgb(35, 45, 57));
+    
+}
+.auth-card{
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+    padding: 10px 10%;
+    
+    
+}
+.service-btn{
+    background-color: white;
+    border: 1px solid rgb(220, 220,220);
+    width: 100%;
+    color: rgb(46, 46, 46);
+    box-shadow: none;
+}
+.btn-theme{
+    background-color: black !important;
+    color: white;
+    box-shadow: none !important;
+    position: absolute;
+    top:10px;
+    left: 10px;
+}

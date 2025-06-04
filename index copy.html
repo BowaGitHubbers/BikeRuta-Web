@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BikeRuta</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Chillax -->
+  <link href="https://fonts.googleapis.com/css2?family=Chillax:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/text-colors.css">
+  <link rel="stylesheet" href="css/bikeruta.css">
+
+  <style>
+    body {
+      font-family: 'Chillax', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .hero-chillax {
+      height: 60vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-chillax video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .hero-chillax h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    .hero-chillax p {
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+
+    .hero-chillax .btn-download {
+      background-color: #439e71;
+      border: none;
+      padding: 10px 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 50px;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-chillax .btn-download:hover {
+      background-color: #47c790;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #232D39;">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logogreenland.png" alt="Brand Logo" width="150" class="img-fluid">
+      </a>
+
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Right icons -->
+        <div class="d-flex align-items-center">
+          <!-- Search Toggle -->
+          <button id="searchToggle" class="btn btn-outline-light rounded-circle me-2" style="width: 40px; height: 40px;">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <!-- Expanding Search Form -->
+          <form id="searchForm" class="d-none d-lg-flex me-2" style="width: 0; overflow: hidden; transition: width 0.3s ease;">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" style="width: 300px;">
+          </form>
+
+          <!-- Login Icon -->
+          <a href="login.html" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+            <i class="bi bi-person"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search toggle script -->
+  <script>
+    const toggleBtn = document.getElementById('searchToggle');
+    const searchForm = document.getElementById('searchForm');
+
+    toggleBtn.addEventListener('click', function () {
+      if (searchForm.style.width === '0px' || searchForm.style.width === '') {
+        searchForm.style.width = '300px';
+      } else {
+        searchForm.style.width = '0';
+      }
+    });
+  </script>
+
+<!-- Hero Section -->
+<section class="hero-chillax position-relative">
+
+  <!-- Bootstrap 5 Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/p1.png" class="d-block w-100" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/p2.png" class="d-block w-100" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/p3.png" class="d-block w-100" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/p4.png" class="d-block w-100" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img src="images/p5.png" class="d-block w-100" alt="Third slide">
+      </div>            
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="container position-absolute top-50 start-50 translate-middle text-center">
+    <h2>Ride Smart. Ride Safe. Ride with <span style="color: #58d395;">BikeRuta</span></h2>
+    <p>The only Philippine-based navigation app designed specifically for cyclists.</p>
+    <a href="download.html" class="btn btn-download mt-3">Download Now</a>
+  </div>
+
+</section>
+
+<style>
+.hero-chillax {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay covers entire hero, semi-transparent black */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* allow clicks to pass through */
+  z-index: 1;
+}
+
+/* Make sure container content is above overlay */
+.hero-chillax .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* Optional: style the download button */
+.btn-download {
+  background-color: #58d395;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #3da877;
+  color: #fff;
+}
+</style>
+
+  
+  <!-- Features Section -->
+  <section class="py-5 text-white" style="background-color: #232D39;"> 
+    <div class="container bikeruta-feature">
+      <h2 class="text-center fw-bold mb-5">
+        Discover the fastest and safest bike routes<br>for your daily rides and adventures
+      </h2>
+  
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <img src="images/map.png" alt="Smart Route Planning" class="mb-3" width="100">
+          <h5 class="fw-bold">Smart Route Planning</h5>
+          <p class="small">Plan smarter rides with routes that adapt to traffic, terrain, and safety conditions in real time.</p>
+        </div>
+  
+        <div class="col-md-4">
+          <img src="images/alert.png" alt="Security Alerts" class="mb-3" width="100">
+          <h5 class="fw-bold">Security Alerts</h5>
+          <p class="small">Get notified with in-text alerts when hazards, route changes, or high-risk zones are detected.</p>
+        </div>
+  
+        <div class="col-md-4">
+          <img src="images/cloud.png" alt="Weather Updates" class="mb-3" width="100">
+          <h5 class="fw-bold">Weather Updates</h5>
+          <p class="small">Real-time weather alerts along your route help you ride safely through changing conditions.</p>
+        </div>
+  
+        <div class="col-md-4 offset-md-1">
+          <img src="images/bike.png" alt="Bike Friendly Routes" class="mb-3" width="100">
+          <h5 class="fw-bold">Bike Friendly Routes</h5>
+          <p class="small">Navigate with ease using routes optimized for bike lanes and cyclist safety.</p>
+        </div>
+  
+        <div class="col-md-4 offset-md-2">
+          <img src="images/lightbulb.png" alt="Community Tips" class="mb-3" width="100">
+          <h5 class="fw-bold">Community Tips</h5>
+          <p class="small">Discover rider-shared tips on routes, road conditions, and cycling best practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Hero Section -->
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100%;
+  }
+
+  .video-section {
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 40vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .video-overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+
+<section class="video-section text-white text-center">
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline>
+    <source src="videos/phonegps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="video-overlay">
+    <h1 class="fw-bold display-4">
+      HOW TO USE <span style="color: #00E89E;">BIKERUTA</span>
+    </h1>
+  </div>
+</section>
+
+
+
+<!-- Instruction Steps -->
+<section class="container py-5">
+  <div class="row g-4 align-items-stretch">
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-white shadow-sm rounded text-center w-100 h-100">
+        <i class="bi bi-phone-fill fs-2 text-success mb-3"></i>
+        <h5 class="fw-bold">Open the App</h5>
+        <p class="mb-0">Launch BikeRuta on your mobile device.</p>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-white shadow-sm rounded text-center w-100 h-100">
+        <i class="bi bi-geo-alt-fill fs-2 text-success mb-3"></i>
+        <h5 class="fw-bold">Enter Destination</h5>
+        <p class="mb-0">Type in where you want to go and let the app calculate.</p>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-white shadow-sm rounded text-center w-100 h-100">
+        <i class="bi bi-signpost-2-fill fs-2 text-success mb-3"></i>
+        <h5 class="fw-bold">Pick a Route</h5>
+        <p class="mb-0">Choose between the fastest or safest bike path.</p>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex">
+      <div class="p-4 bg-white shadow-sm rounded text-center w-100 h-100">
+        <i class="bi bi-map-fill fs-2 text-success mb-3"></i>
+        <h5 class="fw-bold">Follow the Map</h5>
+        <p class="mb-0">Use live guidance with alerts and route changes.</p>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex">
+      <div class="p-4 bg-white shadow-sm rounded text-center w-100 h-100">
+        <i class="bi bi-share-fill fs-2 text-success mb-3"></i>
+        <h5 class="fw-bold">Share Your Ride</h5>
+        <p class="mb-0">Send your route to friends or social apps easily.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">OUR CLIENTS <span style="color: #00E89E;">FEEDBACK</span></h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-5">
+        <div class="bg-white rounded p-4 shadow-sm text-start h-100">
+          <div class="text-warning fs-5 mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>“Since I started using Bike Ruta, my daily rides around Metro Manila have been way easier. It finds routes with bike lanes and fewer cars, and the weather alerts are super helpful.”</p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/profilegirl2.png" class="rounded-circle me-3" alt="Alex" style="width: 50px; height: 50px; object-fit: cover;">
+            <div>
+              <strong>Jerome L.</strong><br>
+              <small>Quezon City Cyclist</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="bg-white rounded p-4 shadow-sm text-start h-100">
+          <div class="text-warning fs-5 mb-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>“Bike Ruta completely changed how I cycle around the city. The real-time alerts and bike-friendly routes make every ride smoother and safer.”</p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/profilegirl.png" class="rounded-circle me-3" alt="Alex" style="width: 50px; height: 50px; object-fit: cover;">
+            <div>
+              <strong>Alex M.</strong><br>
+              <small>Daily Commuter</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer style="background-color: #232D39;" class="text-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Logo & App Buttons -->
+        <div class="col-md-3 mb-4">
+          <img src="images/logogreenland.png" alt="BikeRuta Logo" width="120" class="mb-2">
+          <div class="mb-2">
+            <img src="images/appgoog.png" alt="App Store" width="130" class="mb-2">
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#"><i class="bi bi-twitter fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-youtube fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-linkedin fs-5 icon-black"></i></a>
+            <a href="#"><i class="bi bi-facebook fs-5 icon-black"></i></a>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="col-md-2 mb-3">
+          <h6 class="fw-bold text-feature">Features</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-feature-link text-decoration-none">Subscription</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">Family Plan</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">Student Discount</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">Medical Discount</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">Send a Gift</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">About</a></li>
+            <li><a href="#" class="text-feature-link text-decoration-none">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Routes -->
+        <div class="col-md-2 mb-3">
+          <h6 class="fw-bold text-routes">Routes</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-routes-link text-decoration-none">Find Routes</a></li>
+          </ul>
+        </div>
+
+        <!-- What's New -->
+        <div class="col-md-2 mb-3">
+          <h6 class="fw-bold text-whats-new">What's New</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-whats-new-link text-decoration-none">Stories</a></li>
+            <li><a href="#" class="text-whats-new-link text-decoration-none">Support</a></li>
+            <li><a href="#" class="text-whats-new-link text-decoration-none">Business</a></li>
+            <li><a href="#" class="text-whats-new-link text-decoration-none">Partner Center</a></li>
+            <li><a href="#" class="text-whats-new-link text-decoration-none">Terms</a></li>
+          </ul>
+        </div>
+
+        <!-- Privacy -->
+        <div class="col-md-3 mb-3">
+          <h6 class="fw-bold text-privacy">Privacy</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-privacy-link text-decoration-none">Do Not Share My Info</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
