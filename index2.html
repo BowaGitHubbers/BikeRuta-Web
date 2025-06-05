@@ -108,61 +108,48 @@
       background-color: #f8f9fa;
     }
 
-    .hero-chillax {
-      height: 60vh;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+.hero-chillax {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  /* Remove fixed height and flex */
+  /* height: 60vh; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+}
 
-    .hero-chillax video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Bring overlay on top */
+}
 
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
+.hero-chillax h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
 
-    .hero-chillax h1 {
-      font-weight: 700;
-      font-size: 3rem;
-    }
+.hero-chillax p {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
 
-    .hero-chillax p {
-      font-weight: 400;
-      font-size: 1.25rem;
-    }
-
-    .hero-chillax .btn-download {
-      background-color: #439e71;
-      border: none;
-      padding: 10px 30px;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 50px;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .hero-chillax .btn-download:hover {
-      background-color: #47c790;
-    }
+.hero-chillax .btn-download {
+  background-color: #439e71;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
   </style>
 </head>
 <body>

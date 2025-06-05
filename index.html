@@ -27,57 +27,48 @@
       background-color: #f8f9fa;
     }
 
-    .hero-chillax {
-      height: 60vh;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+.hero-chillax {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  /* Remove fixed height and flex */
+  /* height: 60vh; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+}
 
-    .hero-chillax video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Bring overlay on top */
+}
 
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
+.hero-chillax h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
 
-    .hero-chillax h1 {
-      font-weight: 700;
-      font-size: 3rem;
-    }
+.hero-chillax p {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
 
-    .hero-chillax p {
-      font-weight: 400;
-      font-size: 1.25rem;
-    }
-
-    .hero-chillax .btn-download {
-      background-color: #439e71;
-      border: none;
-      padding: 10px 30px;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 50px;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
+.hero-chillax .btn-download {
+  background-color: #439e71;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
   </style>
 </head>
 <body>
@@ -139,39 +130,50 @@
     });
   </script>
 
-  <!-- Hero Section -->
-  <section class="hero-chillax">
+<!-- Hero Section -->
+<section class="hero-chillax" style="position: relative; overflow: hidden;">
 
-   <!-- Bootstrap 5 Carousel -->
+  <!-- Bootstrap 5 Carousel -->
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
     <div class="carousel-inner">
+
       <div class="carousel-item active">
-        <img src="images/p1.png" class="d-block w-100" alt="First slide">
+        <img src="images/p1.png" alt="First slide" class="d-block mx-auto" style="max-width: 100%; height: auto;">
       </div>
+
       <div class="carousel-item">
-        <img src="images/p2.png" class="d-block w-100" alt="Second slide">
+        <img src="images/p2.png" alt="Second slide" class="d-block mx-auto" style="max-width: 100%; height: auto;">
       </div>
+
       <div class="carousel-item">
-        <img src="images/p3.png" class="d-block w-100" alt="Third slide">
+        <img src="images/p3.png" alt="Third slide" class="d-block mx-auto" style="max-width: 100%; height: auto;">
       </div>
+
       <div class="carousel-item">
-        <img src="images/p4.png" class="d-block w-100" alt="Third slide">
+        <img src="images/p4.png" alt="Fourth slide" class="d-block mx-auto" style="max-width: 100%; height: auto;">
       </div>
-      </div>            
+
     </div>
   </div>
 
   <!-- Overlay -->
-  <div class="hero-overlay"></div>
+  <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 5;"></div>
 
   <!-- Hero Content -->
-  <div class="container position-absolute top-50 start-50 translate-middle text-center">
+  <div class="container position-absolute top-50 start-50 translate-middle text-center" style="z-index: 10; color: white;">
     <h2>Ride Smart. Ride Safe. Ride with <span style="color: #58d395;">BikeRuta</span></h2>
     <p>The only Philippine-based navigation app designed specifically for cyclists.</p>
     <a href="download.html" class="btn btn-download mt-3">Download Now</a>
   </div>
 
 </section>
+
+
+
+
+
+
+
 
 
 <style>
