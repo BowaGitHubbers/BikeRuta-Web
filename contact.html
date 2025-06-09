@@ -92,14 +92,52 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Navbar Closing -->
 
-  
+<style>
+body {
+  background-color: #232D39;
+  color: #ffffff;
+}
+
+.contact-info-card {
+  background-color: #2c3a4a;
+  color: #ffffff;
+}
+
+.contact-info-card a {
+  color: #00E89E;
+}
+
+.contact-info-card a:hover {
+  color: #00E89E;
+}
+
+.form-control {
+  background-color: #2c3a4a;
+  border: 1px solid #00E89E;
+  color: #ffffff;
+}
+
+.form-control::placeholder {
+  color: #ffffff;
+}
+
+.btn-success {
+  background-color: #00E89E;
+  border-color: #00E89E;
+}
+
+.btn-success:hover {
+  background-color: #00E89E;
+  border-color: #00E89E;
+}
+</style>
 
 <!-- Contact Page Section -->
-<section class="container py-5">
+<section class="container py-5" style="background-color: #232D39;">
   <div class="row align-items-center justify-content-center">
     <!-- Contact Form Section -->
     <div class="col-lg-6 mb-4 mb-lg-0">
-      <h2 class="fw-bold text-center text-success mb-4">Get in Touch</h2>
+      <h2 class="fw-bold text-center mb-4" style="color: #00E89E;">Get in Touch</h2>
       <p class="text-center mb-4">We’d love to hear from you! Whether you’re a cyclist, a partner, or just curious, reach out anytime.</p>
 
       <form action="your-backend-script.php" method="POST">
@@ -115,27 +153,27 @@
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
         </div>
-        <button type="submit" class="btn btn-success w-100">Send Message</button>
+        <button type="submit" class="btn btn-success w-100" style="color: #2c3a4a;">Send Message</button>
       </form>
     </div>
 
     <!-- Contact Info Section -->
     <div class="col-lg-5 offset-lg-1">
       <div class="contact-info-card shadow p-3 rounded p-4">
-        <h2 class="fw-bold text-success mb-4">Contact Information</h2> 
+        <h2 class="fw-bold mb-4" style="color: #00E89E;">Contact Information</h2> 
         <ul class="list-unstyled">
-          <li><strong>Email:</strong> <a href="mailto:bikeruta.ph@gmail.com" class="text-decoration-none text-success">bikeruta.ph@gmail.com</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+639123456789" class="text-decoration-none text-success">+63 912 345 6789</a></li>
+          <li><strong>Email:</strong> <a href="mailto:bikeruta.ph@gmail.com" class="text-decoration-none" style="color: #00E89E;">bikeruta.ph@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+639123456789" class="text-decoration-none" style="color: #00E89E;">+63 912 345 6789</a></li>
         </ul>
 
-        <h4 class="fw-bold text-success mt-4 text-center">Follow Us</h4>
+        <h4 class="fw-bold mt-4 text-center" style="color: #00E89E;">Follow Us</h4>
         <div class="d-flex justify-content-center">
-          <a href="https://www.facebook.com/BikeRutaPH" class="text-success me-3" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
-          <a href="https://www.instagram.com/bikeruta" class="text-success me-3" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
-          <a href="https://twitter.com/BikeRutaApp" class="text-success" target="_blank"><i class="bi bi-twitter fs-3"></i></a>
+          <a href="https://www.facebook.com/BikeRutaPH" class="me-3" style="color: #00E89E;" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
+          <a href="https://www.instagram.com/bikeruta" class="me-3" style="color: #00E89E;" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+          <a href="https://twitter.com/BikeRutaApp"  style="color: #00E89E;" target="_blank"><i class="bi bi-twitter fs-3"></i></a>
         </div>
 
-        <h4 class="fw-bold text-success mt-4 text-center">Location</h4>
+        <h4 class="fw-bold mt-4 text-center" style="color: #00E89E;">Location</h4>
         <p class="text-center">Based in Manila, Philippines</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799113591!2d-74.2598769!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ba2f1ac9601%3A0x9be5c4a8b24d8f80!2sManila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1632763623850!5m2!1sen!2sus" style="border:0; width: 100%; height: 350px;" allowfullscreen="" loading="lazy"></iframe>
