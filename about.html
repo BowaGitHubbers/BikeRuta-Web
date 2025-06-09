@@ -80,43 +80,84 @@
   });
 </script>
 
-<!-- About Header -->
+<style>
+  .text-justify {
+    text-align: justify;
+  }
+
+  .about-card {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #232D39;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+</style>
+
+<!-- About Section -->
 <section class="py-5" style="background-color: #232D39;">
   <div class="container">
+    <!-- Section Title -->
     <h2 class="text-center fw-bold mb-5" style="color: #ffffff;">About <span style="color: #00E89E;">Us</span></h2>
 
-    <!-- Mission -->
-    <div class="row mb-5">
-      <div class="col">
-        <h3 style="color: #00E89E;"><i class="bi bi-bullseye me-2"></i>Our Mission</h3>
-        <p style="color: #ffffff;">To empower Filipino cyclists with a smart, safe, and community-driven navigation app that enhances every ride from daily commutes to outdoor adventures.</p>
-      </div>
-    </div>
+    <!-- Mission, Vision, Story in 3 Columns with equal height cards -->
+    <div class="row g-5 text-center justify-content-center">
 
-    <!-- Vision -->
-    <div class="row mb-5">
-      <div class="col">
-        <h3 style="color: #00E89E;"><i class="bi bi-eye me-2"></i>Our Vision</h3>
-        <p style="color: #ffffff;">To become the leading cycling navigation app in the Philippines, advocating for bike safety, accessibility, and a strong biking community.</p>
+      <!-- Mission -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="about-card d-flex flex-column h-100 w-100">
+          <img src="images/mission-icon.png" alt="Mission Icon" width="80" class="mb-4 mx-auto">
+          <h3 style="color: #00E89E;">Our Mission</h3>
+          <p class="text-justify mt-3" style="color: #ffffff;">
+            To empower Filipino cyclists with a smart, safe, and community-driven navigation app that enhances every ride from daily commutes to outdoor adventures.
+          </p>
+          <div class="mt-auto"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Story -->
-    <div class="row mb-5">
-      <div class="col">
-        <h3 style="color: #00E89E;"><i class="bi bi-book-half me-2"></i>Our Story</h3>
-        <p style="color: #ffffff;">BikeRuta started as a school project born from a passion for cycling and a desire to make bike commuting safer and more accessible in the Philippines. Built by a group of Multimedia Arts students, our goal was simple: to give bikers a smarter way to navigate through the city and beyond.</p>
+      <!-- Vision -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="about-card d-flex flex-column h-100 w-100">
+          <img src="images/vision-icon.png" alt="Vision Icon" width="80" class="mb-4 mx-auto">
+          <h3 style="color: #00E89E;">Our Vision</h3>
+          <p class="text-justify mt-3" style="color: #ffffff;">
+            To become the leading cycling navigation app in the Philippines, advocating for bike safety, accessibility, and a strong biking community.
+          </p>
+          <div class="mt-auto"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Team Section -->
+      <!-- Story -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="about-card d-flex flex-column h-100 w-100">
+          <img src="images/story-icon.png" alt="Story Icon" width="80" class="mb-4 mx-auto">
+          <h3 style="color: #00E89E;">Our Story</h3>
+          <p class="text-justify mt-3" style="color: #ffffff;">
+            BikeRuta started as a school project born from a passion for cycling and a desire to make bike commuting safer and more accessible in the Philippines. Built by a group of Multimedia Arts students, our goal was simple: to give bikers a smarter way to navigate through the city and beyond.
+          </p>
+          <div class="mt-auto"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Team Section -->
+<section class="py-5" style="background-color: #232D39;">
+  <div class="container">
     <div class="text-center mb-5">
-      <h3 style="color: #00E89E;"><i class="bi bi-people-fill me-2" style="color: #00E89E;"></i>Meet the Team</h3>
-      <p style="color: #ffffff;">We're a team of students, riders, and tech enthusiasts working together to create a cycling experience that’s safe, social, and seamless.</p>
+      <h3 style="color: #00E89E;"><i class="bi bi-people-fill me-2"></i>Meet the Team</h3>
+      <p style="color: #ffffff; text-align: justify; max-width: 800px; margin: 0 auto;">
+        We're a team of students, riders, and tech enthusiasts working together to create a cycling experience that’s safe, social, and seamless.
+      </p>
     </div>
 
     <!-- Team Grid -->
     <div class="row g-4 justify-content-center">
+
       <!-- Member 1 -->
       <div class="col-md-4 col-sm-6 text-center">
         <div class="team-img-wrapper mx-auto mb-3" style="width: 180px; height: 180px; overflow: hidden;">
@@ -161,18 +202,18 @@
         <h5 class="mb-1" style="color: #00E89E;">Genesis Lim</h5>
         <p style="color: #ffffff;">Visual Designer</p>
       </div>
+
     </div>
   </div>
 </section>
-
 
 <!-- Footer -->
 <footer style="background-color: #00E89E; box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.205);" class="text-dark py-5">
   <div class="container">
     <div class="row">
       <!-- Logo & App Buttons -->
-      <div class="col-md-3 mb-4"  >
-        <img src="images/logoland.png" style="color: #232D39;" alt="BikeRuta Logo" width="120" class="mb-2" >
+      <div class="col-md-3 mb-4">
+        <img src="images/logoland.png" alt="BikeRuta Logo" width="120" class="mb-2">
         <div class="mb-2">
           <img src="images/appgoog.png" alt="App Store" width="130" class="mb-2">
         </div>
@@ -187,56 +228,55 @@
 
       <!-- Features -->
       <div class="col-md-2 mb-3">
-        <h6 class="fw-bold"style="color: #232D39;">Features</h6>
+        <h6 class="fw-bold" style="color: #232D39;">Features</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Subscription</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Family Plan</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Student Discount</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Medical Discount</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Send a Gift</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">About</a></li>
-          <li><a href="#" class="text-feature-link text-decoration-none" style="color: #232D39;">Careers</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Subscription</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Family Plan</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Student Discount</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Medical Discount</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Send a Gift</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">About</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Careers</a></li>
         </ul>
       </div>
 
       <!-- Routes -->
       <div class="col-md-2 mb-3">
-        <h6 class="fw-bold text-routes" style="color: #232D39;">Routes</h6>
+        <h6 class="fw-bold" style="color: #232D39;">Routes</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-routes-link text-decoration-none" style="color: #232D39;">Find Routes</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Find Routes</a></li>
         </ul>
       </div>
 
       <!-- What's New -->
       <div class="col-md-2 mb-3">
-        <h6 class="fw-bold text-whats-new" style="color: #232D39;">What's New</h6>
+        <h6 class="fw-bold" style="color: #232D39;">What's New</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-whats-new-link text-decoration-none" style=" color: #232D39;">Stories</a></li>
-          <li><a href="#" class="text-whats-new-link text-decoration-none" style=" color: #232D39;">Support</a></li>
-          <li><a href="#" class="text-whats-new-link text-decoration-none" style=" color: #232D39;">Business</a></li>
-          <li><a href="#" class="text-whats-new-link text-decoration-none" style=" color: #232D39;">Partner Center</a></li>
-          <li><a href="#" class="text-whats-new-link text-decoration-none" style=" color: #232D39;">Terms</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Stories</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Support</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Business</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Partner Center</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Terms</a></li>
         </ul>
       </div>
 
       <!-- Privacy -->
       <div class="col-md-3 mb-3">
-        <h6 class="fw-bold text-privacy" style="color: #232D39;">Privacy</h6>
+        <h6 class="fw-bold" style="color: #232D39;">Privacy</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-privacy-link text-decoration-none"style="color: #232D39;">Do Not Share My Info</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Safety Center</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Community Guidelines</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Cookies Policy</a></li>
+          <li><a href="#" class="text-decoration-none" style="color: #232D39;">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="text-center mt-4">
-      <small style="color: #232D39;">© 2025 Bikeruta. All rights reserved.</small>
-    </div>
+   
+    <p class="text-center mb-0" style="color: #232D39;">&copy; 2025 BikeRuta. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
