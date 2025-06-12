@@ -102,44 +102,73 @@
     <!-- Mission, Vision, Story in 3 Columns with equal height cards -->
     <div class="row g-5 text-center justify-content-center">
 
-      <!-- Mission -->
-      <div class="col-md-4 mb-4 d-flex">
-        <div class="about-card d-flex flex-column h-100 w-100">
-          <img src="images/mission-icon.png" alt="Mission Icon" width="80" class="mb-4 mx-auto">
-          <h3 style="color: #00E89E;">Our Mission</h3>
-          <p class="text-left mt-3" style="color: #ffffff;">
-            To empower Filipino cyclists with a smart, safe, and community-driven navigation app that enhances every ride from daily commutes to outdoor adventures.
-          </p>
-          <div class="mt-auto"></div>
-        </div>
-      </div>
+<style>
+  .about-card {
+    background-color: transparent;
+    padding: 20px;
+    color: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-      <!-- Vision -->
-      <div class="col-md-4 mb-4 d-flex">
-        <div class="about-card d-flex flex-column h-100 w-100">
-          <img src="images/vision-icon.png" alt="Vision Icon" width="80" class="mb-4 mx-auto">
-          <h3 style="color: #00E89E;">Our Vision</h3>
-          <p class="text-left mt-3" style="color: #ffffff;">
-            To become the leading cycling navigation app in the Philippines, advocating for bike safety, accessibility, and a strong biking community.
-          </p>
-          <div class="mt-auto"></div>
-        </div>
-      </div>
+  .about-card h3 {
+    color: #00E89E;
+    margin: 1rem 0;
+  }
 
-      <!-- Story -->
-      <div class="col-md-4 mb-4 d-flex">
-        <div class="about-card d-flex flex-column h-100 w-100">
-          <img src="images/story-icon.png" alt="Story Icon" width="80" class="mb-4 mx-auto">
-          <h3 style="color: #00E89E;">Our Story</h3>
-          <p class="text-left mt-3" style="color: #ffffff;">
-            BikeRuta started as a school project born from a passion for cycling and a desire to make bike commuting safer and more accessible in the Philippines. Built by a group of Multimedia Arts students, our goal was simple: to give bikers a smarter way to navigate through the city and beyond.
-          </p>
-          <div class="mt-auto"></div>
-        </div>
-      </div>
+  .about-card p {
+    text-align: left;
+    flex-grow: 1;
+    width: 100%;
+  }
 
+  .card-img {
+    width: auto;
+    height: 400px; /* Adjust between 200–300px as needed */
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<div class="row">
+  <!-- Mission -->
+  <div class="col-md-4 mb-4 d-flex">
+    <div class="about-card w-100">
+      <img src="images/MISSION-night.png" alt="Mission" class="card-img">
+      <h3><strong>Our Mission</strong></h3>
+      <p>
+        To empower Filipino cyclists with a smart, safe, and community-driven navigation app that enhances every ride from daily commutes to outdoor adventures.
+      </p>
     </div>
   </div>
+
+  <!-- Vision -->
+  <div class="col-md-4 mb-4 d-flex">
+    <div class="about-card w-100">
+      <img src="images/VISION-night.png" alt="Vision" class="card-img">
+      <h3><strong>Our Vision</strong></h3>
+      <p>
+        To become the leading cycling navigation app in the Philippines, advocating for bike safety, accessibility, and a strong biking community.
+      </p>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <div class="col-md-4 mb-4 d-flex">
+    <div class="about-card w-100">
+      <img src="images/STORY-night.png" alt="Story" class="card-img">
+      <h3><strong>Our Story</strong></h3>
+      <p>
+        BikeRuta started as a school project born from a passion for cycling and a desire to make bike commuting safer and more accessible in the Philippines. Built by a group of Multimedia Arts students, our goal was simple: to give bikers a smarter way to navigate through the city and beyond.
+      </p>
+    </div>
+  </div>
+</div>
+
+
 </section>
 
 
@@ -155,7 +184,7 @@
       <!-- Left Column -->
       <div class="col-md-4 mb-4 mb-md-0 text-md-start text-center">
         <h3 style="color: #00E89E; font-size: 2rem; border-left: 4px solid #00E89E; padding-left: 15px;">
-          <i class="bi bi-people-fill me-2"></i>Meet the Team
+          <i class="bi bi-people-fill me-2"></i> <strong>Meet the Team</strong> 
         </h3>
       </div>
       
